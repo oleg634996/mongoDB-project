@@ -1,7 +1,8 @@
 // xQdCdSfSuKShCig3;
 const mongoose = require("mongoose");
 
-const {DB_HOST}=require("./config")
+console.log(process.env.DB_HOST)
+const {DB_HOST}=process.env
 
 mongoose.connect(DB_HOST)
     .then(() => console.log("database connect"))
